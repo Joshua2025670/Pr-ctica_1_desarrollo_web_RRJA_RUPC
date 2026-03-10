@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        p {text-align: center;}
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Diccionario de Etiquetas</h1>
+    <h3>Joshua Abraham Reyes Rodríguez</h3>
+    <h3>Perla Citlaly Roman Ureña</h3>
+    <h3>Tecnologías para el Desarrollo de Aplicaciones Web 4CM1</h3>
+    </center>
+    <table>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+            th{
+                background-color: #f2f2f2;
+            }
+            caption{
+                font-size: 1.5em;
+                margin: 10px 0;
+            }
+        </style>
+        <tbody>
+        <tr>
+            <th>Titulo</th><th>Categoría</th><th>Especificaciones</th>
+        </tr>
+        <tr>
+            <td>html</td><td>Estructura</td><td><a th:href="@{/1}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>head</td><td>Estructura</td><td><a th:href="@{/2}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>body</td><td>Estructura</td><td><a th:href="@{/3}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>p</td><td>Texto</td><td><a th:href="@{/4}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>h1</td><td>Texto</td><td><a th:href="@{/5}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>span</td><td>Texto</td><td><a th:href="@{/6}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>strong</td><td>Texto</td><td><a th:href="@{/7}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>a</td><td>Enlaces o imagenes</td><td><a th:href="@{/8}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>img</td><td>Enlaces o imagenes</td><td><a th:href="@{/9}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>ul</td><td>Listas</td><td><a th:href="@{/10}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>ol</td><td>Listas</td><td><a th:href="@{/11}">Ver</a></td>
+        </tr>
+        <tr>
+        <td>table</td><td>Tablas</td><td><a th:href="@{/12}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>form</td><td>Formularios</td><td><a th:href="@{/13}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>input</td><td>Formularios</td><td><a th:href="@{/14}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>button</td><td>Formularios</td><td><a th:href="@{/15}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>video</td><td>Multimedia</td><td><a th:href="@{/16}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>header</td><td>Semánticas</td><td><a th:href="@{/17}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>footer</td><td>Semánticas</td><td><a th:href="@{/18}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>nav</td><td>Semánticas</td><td><a th:href="@{/19}">Ver</a></td>
+        </tr>
+        <tr>
+            <td>section</td><td>Semánticas</td><td><a th:href="@{/20}">Ver</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>detalles: [[${tag.nombre}]]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Inicio</a></li>
+                    <li class="breadcrumb-item active text-primary">&lt;[[${tag.nombre}]]&gt;</li>
+                </ol>
+            </nav>
+
+            <div class="card shadow-lg">
+                <div class="card-header bg-dark text-white p-4">
+                    <h1 class="h2 mb-0 font-monospace text-warning">&lt;[[${tag.nombre}]]&gt;</h1>
+                </div>
+
+                <div class="card-body p-4">
+                    <h4 class="text-secondary border-bottom pb-2">Descripción</h4>
+                    <p class="lead" th:text="${tag.descripcion}"></p>
+
+                    <h4 class="mt-4 text-secondary border-bottom pb-2">Sintaxis Básica</h4>
+                    <div class="bg-light p-3 rounded">
+                        <code class="text-danger fw-bold">[[${tag.sintaxis}]]</code>
+                    </div>
+
+                    <h4 class="mt-4 text-secondary border-bottom pb-2">Atributos Comunes</h4>
+                    <p class="badge bg-info text-dark" th:text="${tag.atributos}"></p>
+
+                    <h4 class="mt-4 text-secondary border-bottom pb-2">Código de Ejemplo</h4>
+                    <pre class="bg-dark text-success p-3 rounded"><code>[[${tag.ejemploCodigo}]]</code></pre>
+
+                    <h4 class="mt-4 text-secondary border-bottom pb-2">Resultado Real</h4>
+                    <div class="border rounded p-4 bg-light shadow-inner">
+                        <div th:utext="${tag.ejemploCodigo}"></div>
+                    </div>
+                </div>
+
+                <div class="card-footer d-flex justify-content-between">
+                    <a th:if="${currentId > 1}" th:href="@{'/' + ${currentId - 1}}" class="btn btn-secondary">← Anterior</a>
+
+                    <a th:href="@{/}" class="btn btn-outline-dark">Inicio</a>
+
+                    <a th:if="${currentId < total}" th:href="@{'/' + ${currentId + 1}}" class="btn btn-primary">Siguiente →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
